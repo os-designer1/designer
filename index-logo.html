@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style-logo.css">
+    <title>logo</title>
+</head>
+<body>
+
+  <div id="loading-screen">
+    <div class="loader"></div> <!-- العنصر الذي سيظهر أثناء التحميل -->
+    <p>جاري التحميل...</p> <!-- نص اختياري -->
+  </div>
+
+
+    <!-- شريط التنقل العلوي -->
+    <div class="top-bar">
+      <div class="logo">
+          <a href="index.html"><img src="logo11.png" alt="Logo"></a>
+          
+      </div>
+      <a href="https://wa.me/201144898934?text=   اهلا اسامه
+      الاسم :" target="_blank" class="whatsapp-button">تواصل واتساب</a>
+  </div>
+<!--صور الواجهه الاولي -->
+
+<div class="image-container">
+    <img src="11.jpg" alt="Sample Image">
+    <div class="overlay">
+    </div>
+</div>
+
+
+
+
+<div class="conto">
+    <div class="cont">
+    <img src="22.jpg" alt="">
+    <div class="teto">
+      <h2>  الشعارات النصية </h2>
+      <a href="https://wa.me/201144898934?text=    شعار نصي
+      كود:logo-1
+      الاسم :" class="but" target="_blank">أعرف المزيد</a>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="conto">
+        <div class="cont">
+        <img src="33.jpg" alt="">
+        <div class="teto">
+          <h2>   الشعارات الرمزية</h2>
+          <a href="https://wa.me/201144898934?text=  شعار رمزي
+         كود:logo-2
+          الاسم :" class="but" target="_blank">أعرف المزيد</a>
+        </div>
+        </div>
+        </div>
+
+        <div class="conto">
+            <div class="cont">
+            <img src="44.jpg" alt="">
+            <div class="teto">
+              <h2> الشعارات المركبة</h2>
+              <a href="https://wa.me/201144898934?text= اريد شعار مركب
+              كود:logo-3
+              الاسم :" class="but" target="_blank">أعرف المزيد</a>
+            </div>
+            </div>
+            </div>
+
+<!-- Footer Section -->
+ 
+
+
+<footer>
+  <div class="line"></div>
+
+  <a href="index-suport.html" class="Support">الدعم</a>
+  <div class="line"></div>
+
+
+  <p class="oo">&copy;  OS Designer  |  2025  جميع الحقوق محفوظة.</p>
+  
+  <p class="oo">    للاتصال : 01144898934
+  </p>
+  <br>
+    <div class="oo">
+    <li><a href="https://www.facebook.com/groups/474106494979527"> <img src="faa1.png" alt=""></a></li>
+    <li><a href="https://www.instagram.com/os.designer1/?igsh=MTFqNXNrYmsyYjdvbw%3D%3D"><img src="inn1.png" alt=""></a></li>
+    <li><a href="https://www.tiktok.com/@osdesigner7"><img src="tti1.png" alt=""> </a></li>
+    <li><a href="https://www.youtube.com/@OSDesigner-1"> <img src="yoo1.png" alt=""></a></li>
+  </div>
+  
+  </footer>
+  
+  
+  <div id="scrollToTopBtn" class="scroll-to-top">
+    ↑
+  </div>
+</body>
+<script>
+    // تحديد العنصر
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// إظهار الأيقونة عند التمرير لأسفل
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) { // إذا تم التمرير لأكثر من 300 بكسل
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+// الانتقال إلى أعلى الصفحة عند النقر على الأيقونة
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // تمرير سلس
+  });
+});
+
+window.addEventListener("load", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.display = "none"; // إخفاء شاشة التحميل بعد التحميل
+});
+</script>
+</html>

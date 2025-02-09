@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stily-suport.css">
+    <link rel="icon" href="logo.png">
+    <title>نموذج رسالة دعم</title>
+</head>
+<body>
+
+
+    <div id="loading-screen">
+        <div class="loader"></div> <!-- العنصر الذي سيظهر أثناء التحميل -->
+        <p>جاري التحميل...</p> <!-- نص اختياري -->
+      </div>
+
+
+    <div class="container">
+        <!-- الشعار في الأعلى -->
+        <div class="logo">
+            <img src="logo.png" alt="شعار الدعم" />
+        </div>
+
+        <!-- عنوان الصفحة -->
+        <h1>نموذج دعم العملاء</h1>
+
+        <!-- نموذج إرسال الرسالة -->
+        <form id="supportForm">
+            <div class="form-group">
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required placeholder="اكتب اسمك هنا">
+            </div>
+
+            
+
+            <div class="form-group">
+                <label for="message">رسالة الدعم:</label>
+                <textarea id="message" name="message" required placeholder="اكتب رسالتك هنا..."></textarea>
+            </div>
+
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('supportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var message = document.getElementById('message').value;
+
+
+            // الرقم الذي سترسل إليه الرسالة (تأكد من تعديل الرقم)
+            var phoneNumber = '201144898934';
+
+            // رابط واتساب مع الرسالة
+            var url = `https://wa.me/201144898934?text=${encodeURIComponent(fullMessage)}`;
+            window.open(url, '_blank'); // يفتح الرابط في نافذة جديدة
+        });
+
+        window.addEventListener("load", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.display = "none"; // إخفاء شاشة التحميل بعد التحميل
+});
+    </script>
+</body>
+</html>

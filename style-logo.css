@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=El+Messiri:wght@400..700&family=Lemonada:wght@300..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Readex+Pro:wght@160..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=El+Messiri:wght@400..700&family=Lemonada:wght@300..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rakkas&family=Readex+Pro:wght@160..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* خلفية داكنة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000; /* تأكد من ظهوره فوق كل العناصر */
+    color: white;
+    font-size: 20px;
+  }
+  
+  .loader {
+    border: 5px solid #f3f3f3; /* لون الخلفية */
+    border-top: 5px solid #007bff; /* لون التحميل */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* انيميشن الدوران */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .loader {
+    animation: scale 1s ease infinite; /* تكبير وتصغير */
+  }
+
+  body {
+    background-color: #171717;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* الشريط */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 38px;
+  background-color: rgba(0, 0, 0, 0.7); /* شفاف */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* اللوجو */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 30px; /* ارتفاع اللوجو */
+  margin: 10px;
+}
+
+/* الزر */
+.whatsapp-button {
+  background-color: #25D366; /* لون واتساب */
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebf5a;
+}
+
+/* جعل الشريط متجاوبًا */
+@media (max-width: 768px) {
+  .logo span {
+      font-size: 14px; /* تصغير النص */
+  }
+  .whatsapp-button {
+      font-size: 12px;
+      padding: 5px 9px;
+  }
+}
+  @media (max-width:480){
+    .whatsapp-button{
+      padding: 3px 8px;
+
+    }
+    
+  }
+  
+  /*--صوره الاولي في العرض--*/
+  body{
+    direction: rtl; /* لدعم الكتابة من اليمين إلى اليسار */
+  }
+  /* Image container styles */
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width:100%;
+  }
+  
+  .image-container img {
+    width: 100%;
+   
+    display: block;
+  }
+  
+  
+  /*-------------------تجــــــــاوب-----------------------------*/
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgb(0, 0, 0);
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        border-radius: 5px;
+    }
+  
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .burger {
+        display: flex;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .overlay {
+        padding: 3px; /* تقليل المساحة الداخلية للشاشات الأصغر */
+        justify-content: flex-start; /* محاذاة النصوص بشكل أقرب */
+        
+      }
+      .nav-button {
+        padding: 5px 10px;
+        display: block; /* الزر يظهر دائمًا في جميع الأحجام */
+        margin-left: 0px;
+    }
+    a{
+      text-decoration: none;  
+    }
+    .navbar{
+      height: 33px;
+    }
+}
+/*-----الصوره العلويه------*/
+
+body{
+  direction:rtl;  /* لدعم الكتابة من اليمين إلى اليسار */
+}
+/* Image container styles */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width:100%;
+}
+
+.image-container img {
+  width: 100%;
+ 
+  display: block;
+}
+
+/*---منتجات---*/
+
+/* قسم يحتوي على صورة وكلام */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url('1.jpg'); /* ضع رابط الصورة هنا */
+  background-size: cover;
+  background-position: center;
+
+  height: 80vh; /* يمكنك تعديل هذا الارتفاع حسب الحاجة */
+  padding: 0 20px;
+}
+
+.content {
+  color: white;
+  text-align: left;
+  max-width: 600px; /* لتحديد المساحة المخصصة للكلام */
+  margin-left: 20px;
+}
+
+.content h2 {
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+.content h2.os{
+
+  color: #A2A2A0;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition:  0.3s ease;
+}
+
+.cta-button:hover {
+  padding: 15px 25px;
+  background-color: #ff0000;
+}
+
+/* تجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .hero {
+      
+      height: 40vh;
+  }
+
+  .content h2 {
+      font-size: 20px;
+  }
+
+  .content p {
+      font-size: 13px;
+  }
+
+  .cta-button {
+      padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+      height: 33vh;
+  }
+
+  .content h2.os {
+    
+    font-size: 20px;
+}
+  .content h2 {
+      font-size: 20px;
+  }
+
+  .content p {
+      font-size: 13px;
+      
+  }
+
+  .cta-button {
+      padding: 8px 15px;
+      font-size: 12px;
+  }
+}
+
+
+
+/* التفاعل عند الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* إظهار زر القائمة */
+  }
+
+  .navbar {
+      display: none; /* إخفاء القائمة افتراضيًا */
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9); /* لون خلفية القائمة */
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .navbar.active {
+      display: flex; /* إظهار القائمة عند الضغط */
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+
+.glare a img{
+
+border: 10px;
+  width: 100%;
+}
+
+
+/*---------------------------------------*/
+
+
+/* حاوية الصور والعناصر */
+.conto {
+display: flex;
+justify-content: space-between;
+gap: 5px;
+margin: 10px 0px 0px 0px ;
+flex-wrap: wrap;
+padding: 0px;
+
+}
+
+/* تصميم الصورة */
+.cont {
+position: relative;
+width: 100%;
+min-width: 50%;
+overflow: hidden;
+}
+
+.cont img {
+width: 100%;
+height: 100%;
+display: block;
+}
+
+/* التراكب النصي */
+.teto {
+position: absolute;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: white;
+text-align: center;
+padding: 0px 20px;
+
+}
+
+.teto h2 {
+font-size: 50px;
+margin-bottom: 10px;
+}
+
+.teto p {
+font-size: 30px;
+margin-bottom: 10px;
+
+}
+
+.but {
+background-color: #007BFF;
+color: white;
+padding: 18px 25px;
+text-decoration: none;
+font-size:24px;
+border-radius: 50px;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 1200px) {
+.conto {
+width: 100%;
+  flex-direction: column; /* جعل الصور فوق بعضها في الشاشات الصغيرة */
+}
+.but{
+padding: 6px 12.5px ;
+font-size:10px ;
+}
+.teto h2{
+font-size: 20px;
+}
+.cont {
+  width: 100%; /* جعل كل صورة تأخذ عرض كامل في الشاشات الصغيرة */
+  margin-bottom: 20px;
+}
+}
+
+@media (max-width: 480px) {
+.conto {
+  margin: 4px 0px 0px 0px ;
+  flex-direction: column; /* جعل الصور فوق بعضها في الشاشات الصغيرة */
+}
+.but{
+padding:7px 16.5px ;
+font-size:15px ;
+
+}
+.but:hover{
+border: #007BFF;
+}
+.teto h2{
+font-size: 15px;
+}
+.teto p {
+font-size: 15px;
+
+
+}
+.cont {
+  width: 100%; /* جعل كل صورة تأخذ عرض كامل في الشاشات الصغيرة */
+  margin-bottom: 4px;
+}
+footer li a img{
+  width: 10%;
+}
+}
+
+/*--الفوتور--*/
+footer {
+background-color: #131313;
+color: #ffffff;
+text-align: center;
+padding: 20px;
+
+}
+
+
+.aa{
+background-color: black;
+height: .1px;
+}
+
+footer li {
+
+display: contents;
+float: right;
+float: left;
+gap: 20px;
+}
+.Support{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin-left: 90%;
+}
+
+footer li a {
+padding: 15px;
+color:#ffffff;
+text-decoration: none;
+font-size: 18px;
+transition: color 0.3s ease;
+}
+
+footer li a img{
+width: 3%;
+transition:  0.3s ease;
+}
+footer li a img:hover{
+width: 4%;
+}
+
+@media (max-width: 480px) {
+.oo li a img{
+    width: 30px;
+}
+.oo{
+    font-size: 10px;
+}
+.montgat a{
+    font-size: 15px;
+  }
+  .Support{
+    font-size: 20px;
+  }
+}
+.line {
+  border-top: 2px solid #8f8f8f; /* عرض الخط ولونه */
+  margin: 0px 0; /* مسافة فوق وتحت الخط */
+}
+
+@media (max-width: 786px) {
+  .oo li a img{
+      width: 40px;
+  }
+  .oo{
+      font-size: 13px;
+  }
+  .montgat a{
+      font-size: 18px;
+    }
+    .Support{
+      font-size: 23px;
+    }
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* مخفية في البداية */
+  transform: translateY(20px); /* تتحرك من الأسفل */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* انيميشن سلس */
+}
+
+.scroll-to-top.show {
+  opacity: 1; /* تظهر */
+  transform: translateY(0); /* تعود إلى مكانها */
+}
+
+.scroll-to-top.hide {
+  opacity: 0; /* تختفي */
+  transform: translateY(20px); /* تتحرك للأسفل */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

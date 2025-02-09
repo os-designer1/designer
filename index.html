@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> OS Designer تصميمات</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+  <script src="index-design.js" defer></script>
+</head>
+<body>
+
+  <div id="loading-screen">
+    <div class="loader"></div> <!-- العنصر الذي سيظهر أثناء التحميل -->
+    <p>جاري التحميل...</p> <!-- نص اختياري -->
+  </div>
+
+  <!-- شريط التنقل العلوي -->
+ 
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- الشعار -->
+            <div class="logo">
+              <a href="index-design.html"><img src="logo.png" alt="لوجو الشركة"></a>
+            </div>
+
+            <!-- زر القائمة (للشاشات الصغيرة) -->
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <!-- عناصر القائمة -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="https://wa.me/201144898934?text= اهلا اسامه
+                      الاسم :"> التواصل واتساب</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   <!-- قسم يحتوي على صورة وكلام -->
+   <section class="hero">
+    <div class="content">
+      <br>
+        <h2>أهلاً بك في تصميمات</h2>
+        <h2 class="os"> OS Designer  </h2>
+        <p> </p>
+        
+    </div>
+</section>
+<header>
+
+ 
+
+    <div class="conto">
+<div class="cont">
+<img src="00.jpg" alt="">
+<div class="teto">
+  <h2> Social media  أعلانات</h2>
+  <a href="index-sochal.html" class="but">أعرف المزيد</a>
+</div>
+
+</div>
+</div>
+
+<div class="conto">
+  <div class="cont">
+  <img src="01.jpg" alt="">
+  <div class="teto">
+    <h2>logo شعار</h2>
+    <a href="index-logo.html" class="but">أعرف المزيد</a>
+  </div>
+  
+  </div>
+  </div>
+  
+
+  <div class="conto">
+    <div class="cont">
+    <img src="02.jpg" alt="">
+    <div class="teto">
+      <h2>كارت شخصي  </h2>
+      <a href="index-card.html" class="but">أعرف المزيد</a>
+    </div>
+    </div>
+    </div>
+    
+
+    <div class="conto">
+      <div class="cont">
+      <img src="03.jpg" alt="">
+      <div class="teto">
+        <h2> بنر و يفط</h2>
+        <a href="index-panar.html" class="but">أعرف المزيد</a>
+      </div>
+      </div>
+      </div>
+
+      <div class="conto">
+        <div class="cont">
+        <img src="04.jpg" alt="">
+        <div class="teto">
+          <h2> لوجو علي تيشرت  </h2>
+          <a href="index-logo Teshert.html" class="but">أعرف المزيد</a>
+        </div>
+        </div>
+        </div>
+  
+
+
+        <div class="conto">
+          <div class="cont">
+          <img src="05.jpg" alt="">
+          <div class="teto">
+            <h2>  خدمات الورقيه </h2>
+            <a href="index-pepr.html" class="but">أعرف المزيد</a>
+          </div>
+          </div>
+          </div>
+    
+
+
+
+
+         <!-- Footer Section -->
+  <footer>
+    <div class="line"></div>
+        
+
+    <a href="index-suport.html" class="Support">الدعم</a>
+    <div class="line"></div>
+
+  
+    <p class="oo">&copy;  OS Designer  |  2025  جميع الحقوق محفوظة.</p>
+    
+    <p class="oo">    للاتصال : 01144898934
+    </p>
+    <br>
+
+    <div class="oo">
+    <li><a href="https://www.facebook.com/groups/474106494979527"> <img src="faa.png" alt=""></a></li>
+    <li><a href="https://www.instagram.com/os.designer1/?igsh=MTFqNXNrYmsyYjdvbw%3D%3D"><img src="inn.png" alt=""></a></li>
+    <li><a href="https://www.tiktok.com/@osdesigner7"><img src="tti.png" alt=""> </a></li>
+    <li><a href="https://www.youtube.com/@OSDesigner-1"> <img src="yoo.png" alt=""></a></li>
+  </div>
+
+
+  </footer>
+
+
+
+
+  <div id="scrollToTopBtn" class="scroll-to-top">
+    ↑
+  </div>
+</body>
+<script>
+    // تحديد العنصر
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// إظهار الأيقونة عند التمرير لأسفل
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) { // إذا تم التمرير لأكثر من 300 بكسل
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+// الانتقال إلى أعلى الصفحة عند النقر على الأيقونة
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // تمرير سلس
+  });
+});
+
+
+
+
+window.addEventListener("load", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.display = "none"; // إخفاء شاشة التحميل بعد التحميل
+});
+</script>
+</html>

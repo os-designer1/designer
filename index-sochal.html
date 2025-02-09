@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Social media</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style-sochal.css">
+</head>
+<body>
+
+  <div id="loading-screen">
+    <div class="loader"></div> <!-- العنصر الذي سيظهر أثناء التحميل -->
+    <p>جاري التحميل...</p> <!-- نص اختياري -->
+  </div>
+
+<!-- شريط التنقل العلوي -->
+      <nav class="navbar">
+          <div class="logo">
+            <a href="index.html"><img src="logo9.png" alt=""></a>
+          </div>
+          <ul class="nav-links">
+          </ul>
+          <a href="https://wa.me/201144898934?text= اهلا بك اسامه
+          الاسم :
+          " target="_blank"><button class="nav-button"> تواصل واتساب</button></a>
+         
+      </nav>
+
+
+
+      <div class="image-container">
+        <img src="1.1.1.jpg" alt="Sample Image">
+        <div class="overlay">
+        </div>
+    </div>
+
+  
+
+    <div class="image-with-text">
+      <img src="1.1.jpg" alt="Sample Image">
+      <div class="text-content1">
+          <h1>تصميم برندات</h1>
+          <p>تصميم يجزب عملائك و يقوي صفحتك لزيارتها</p>
+          <a href="https://wa.me/201144898934?text=  اعلان براند
+            كود:1.1.1
+          الاسم :
+            " target="_blank"><button class="bo1">اطلب تصميمك الان</button></a>
+
+      </div>
+  </div>
+
+  <div class="image-with-text">
+    <img src="2.2.2.jpg" alt="Sample Image">
+    <div class="text-content2">
+        <h1> أعلانات اكلاتك عندنا</h1>
+        <p>هنصمم و هنبدع علشانك</p>
+        <a href="https://wa.me/201144898934?text=  اعلان لمطعم
+        كود:2.2.2
+        الاسم :  
+        " target="_blank"><button class="bo1">اطلب تصميمك الان</button></a>
+  
+    </div>
+  </div>
+  
+
+  <div class="image-container1">
+    <img src="3.3.3.jpg" alt="Sample Image">
+    <div class="text-overlay">
+        <h1>أعلانات رحلات </h1>
+        <p>أكتشف عملاء و وسع من انتاجيتك </p>
+        <a href="https://wa.me/201144898934?text=  اعلان للرحلات
+        كود:3.3.3
+        الاسم :
+        " target="_blank"><button class="bo1">اطلب تصميمك الان</button></a>
+
+    </div>
+</div>
+
+
+<div class="image-with-text">
+  <img src="4.4.4.jpg" alt="Sample Image">
+  <div class="text-content2">
+      <h1> أستثمار عقارات</h1>
+      <p>هنصمم أعلانك بكل احترافيه</p>
+      <a href="https://wa.me/201144898934?text=  اعلان عقارات
+      كود:4.4.4
+      الاسم :
+      " target="_blank"><button class="bo1">اطلب تصميمك الان</button></a>
+
+  </div>
+</div>
+
+
+<div class="image-container1">
+  <img src="5.5.jpg" alt="Sample Image">
+  <div class="text-overlay3">
+      <h1>أعلانات مشروباتك المميزه </h1>
+      <p> طور مشروبك بأعلان مميز</p>
+      <a href="https://wa.me/201144898934?text=  اعلان للمشروبات
+      كود:5.5
+      الاسم :
+      " target="_blank"><button class="bo1">اطلب تصميمك الان</button></a>
+
+  </div>
+</div>
+
+
+
+ <!-- Footer Section -->
+ <footer>
+  <div class="line"></div>
+
+  <a href="index-suport.html" class="Support">الدعم</a>
+  <div class="line"></div>
+
+
+  <p class="oo">&copy;  OS Designer  |  2025  جميع الحقوق محفوظة.</p>
+  
+  <p class="oo">    للاتصال : 01144898934
+  </p>
+  <br>
+
+  <div class="oo">
+  <li><a href="https://www.facebook.com/groups/474106494979527"> <img src="faa2.png" alt=""></a></li>
+  <li><a href="https://www.instagram.com/os.designer1/?igsh=MTFqNXNrYmsyYjdvbw%3D%3D"><img src="inn2.png" alt=""></a></li>
+  <li><a href="https://www.tiktok.com/@osdesigner7"><img src="tti2.png" alt=""> </a></li>
+  <li><a href="https://www.youtube.com/@OSDesigner-1"> <img src="yoo2.png" alt=""></a></li>
+</div>
+
+</footer>
+<div id="scrollToTopBtn" class="scroll-to-top">
+  ↑
+</div>
+</body>
+<script>
+  // تحديد العنصر
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// إظهار الأيقونة عند التمرير لأسفل
+window.addEventListener("scroll", () => {
+if (window.scrollY > 300) { // إذا تم التمرير لأكثر من 300 بكسل
+  scrollToTopBtn.classList.add("show");
+} else {
+  scrollToTopBtn.classList.remove("show");
+}
+});
+
+// الانتقال إلى أعلى الصفحة عند النقر على الأيقونة
+scrollToTopBtn.addEventListener("click", () => {
+window.scrollTo({
+  top: 0,
+  behavior: "smooth" // تمرير سلس
+});
+});
+window.addEventListener("load", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.display = "none"; // إخفاء شاشة التحميل بعد التحميل
+});
+
+</script>
+  <script src="script1.js">
+    
+  </script>
+</html>
